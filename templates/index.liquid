@@ -1,3 +1,44 @@
+<STYLE>
+
+I_CANT_HANG_WITH_SOMEBODY {
+  DISPLAY: FLEX;
+  FLEX-FLOW: ROW WRAP;
+  JUSTIFY-CONTENT: SPACE-AROUND;
+}
+
+I_CANT_HANG_WITH_SOMEBODY DIV {
+  PADDING: 1REM;
+}
+
+.WHO_HANGS_OUT_WITH_EVERYBODY {
+  FLEX: 1;
+}
+
+.CAUSE_I_REFUSE_TO_HAVE_SOMEBODY {
+  FLEX: 2;
+}
+
+.THINKING_IM_JUST_LIKE_EVERYBODY {
+  FLEX: 1;
+}
+
+</STYLE>
+
+<DIV CLASS ="I_CANT_HANG_WITH_SOMEBODY">
+  <DIV CLASS ="WHO_HANGS_OUT_WITH_EVERYBODY">
+    <IMG SRC="https://static.insales-cdn.com/files/1/4852/19657460/original/Frame_5.png">
+    <P>IRAMAX</P>
+  </DIV>
+    <DIV CLASS ="CAUSE_I_REFUSE_TO_HAVE_SOMEBODY">
+    <IMG SRC="https://static.insales-cdn.com/files/1/4853/19657461/original/Frame_4.png">
+    <P>IRAMAX</P>
+  </DIV>
+    <DIV CLASS ="THINKING_IM_JUST_LIKE_EVERYBODY">
+    <IMG SRC="https://static.insales-cdn.com/files/1/4852/19657460/original/Frame_5.png">
+    <P>IRAMAX</P>
+  </DIV>
+</DIV>
+
 {% for widgetDrop in widget_lists.index-list.widgets %}
   {% widget widgetDrop %}
 {% endfor %}

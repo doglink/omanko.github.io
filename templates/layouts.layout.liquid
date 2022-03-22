@@ -16,15 +16,13 @@
     {% include "head" %}
   </head>
   <body data-multi-lang="{{ language.not_default? }}" data-theme-template="{{ template }}" data-sidebar-type="{{ sidebar_type }}" data-sidebar-position="{{ sidebar_position }}">
-    <div class="preloader">
-      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-    </div>
     {% include "system_no_js_alert" %}
     <div class="page_layout {% if sidebar_show %}page_layout_{{ sidebar_type }}_{{ sidebar_position }}{% else %}page_layout-clear{% endif %} {{- settings.fixed_sidebar_border -}} {% if template contains 'collection' %}page_layout_section_top{% endif %}">
       <header>
-      {% for widgetDrop in widget_lists.header-list.widgets %}
-        {% widget widgetDrop %}
-      {% endfor %}
+        <div class="IRAMAX">
+          <div class="ÖMANKÖSTORE">ömanköstore</div>
+          <div class="ÖMANKÖSTORE">cart ({{ cart.items_count }})</div>
+        </div>
       </header>
 
       {% if template contains 'collection' %}
@@ -39,58 +37,10 @@
         {{ content_for_layout }}
       </main>
 
-      {% if sidebar_show or editor_mode? %}
-      <aside>
-        <section data-sidebar>
-          {% if template contains 'blog' %}
-            {% for widgetDrop in widget_lists.sidebar_blog-list.widgets %}
-              {% widget widgetDrop %}
-            {% endfor %}
-            {% elsif template contains 'collection'  %}
-                {% for widgetDrop in widget_lists.sidebar_collection-list.widgets %}
-                  {% widget widgetDrop %}
-                {% endfor %}
-            {% elsif template contains 'index' %}
-                {% for widgetDrop in widget_lists.sidebar_index-list.widgets %}
-                  {% widget widgetDrop %}
-                {% endfor %}
-            {% elsif template contains 'article' %}
-                {% for widgetDrop in widget_lists.sidebar_article-list.widgets %}
-                  {% widget widgetDrop %}
-                {% endfor %}
-            {% elsif template contains 'compares' %}
-                {% for widgetDrop in widget_lists.sidebar_compare-list.widgets %}
-                  {% widget widgetDrop %}
-                {% endfor %}
-            {% elsif template contains 'product' %}
-                {% for widgetDrop in widget_lists.sidebar_product-list.widgets %}
-                  {% widget widgetDrop %}
-                {% endfor %}
-            {% elsif template contains 'favorite' %}
-                {% for widgetDrop in widget_lists.sidebar_favorite-list.widgets %}
-                  {% widget widgetDrop %}
-                {% endfor %}
-            {% elsif template contains 'search' %}
-                {% for widgetDrop in widget_lists.sidebar_search-list.widgets %}
-                  {% widget widgetDrop %}
-                {% endfor %}
-            {% elsif template contains 'page' %}
-                {% for widgetDrop in widget_lists.sidebar_page-list.widgets %}
-                  {% widget widgetDrop %}
-                {% endfor %}
-            {% elsif template contains 'cart' %}
-                {% for widgetDrop in widget_lists.sidebar_cart-list.widgets %}
-                  {% widget widgetDrop %}
-                {% endfor %}      
-            {% endif %}
-        </section>
-      </aside>
-      {% endif %}
-
       <footer>
-        {% for widgetDrop in widget_lists.footer-list.widgets %}
-          {% widget widgetDrop %}
-        {% endfor %}
+        <div class="IRAMAX">
+          <div class="DNO">i can’t hang with somebody who hangs out with everybody cause i refuse to have somebody thinking i’m just like everybody</div>
+        </div>
       </footer>
     </div>
     
@@ -142,3 +92,51 @@
 
   {% include "microdata" %}
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<STYLE>
+BODY {
+  FONT-FAMILY: HELVETICA, SERIF;
+}
+
+HEADER {
+PADDING-TOP: 1REM;
+}
+
+FOOTER {
+PADDING-BOTTOM: 1REM;
+}
+
+.IRAMAX {
+  DISPLAY: FLEX;
+  DISPLAY: WRAP;
+}
+
+.ÖMANKÖSTORE {
+  FLEX: 1 1 320PX;
+  FONT-SIZE: 1REM;
+  TEXT-ALIGN: CENTER;
+  TEXT-TRANSFORM: UPPERCASE;
+  FONT-WEIGHT: 750.26;
+}
+
+.DNO {
+  FLEX: 1 1 320PX;
+  FONT-SIZE: 0.5REM;
+  TEXT-ALIGN: CENTER;
+  TEXT-TRANSFORM: UPPERCASE;
+  FONT-WEIGHT: 750.26;
+}
+
+</STYLE>
